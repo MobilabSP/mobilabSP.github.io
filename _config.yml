@@ -1,0 +1,298 @@
+name: Mobilab
+description: Laboratório de Mobilidade Urbana da Prefeitura de São Paulo
+url: http://mobilab.prefeitura.sp.gov.br
+timezone: America/Sao_Paulo
+markdown: redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'no_intra_emphasis', 'autolink']
+permalink: /:categories/:title/
+exclude:
+  - wp-content
+  - sass
+  - config.rb
+  - README.md
+  - .gitignore
+  - .tm_properties
+  - CNAME
+  - config.ru
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - vendor
+  - Procfile
+  - Rakefile
+  - node_modules
+collections:
+  team_and_board:
+    output: true
+    permalink: /team/:title/
+  projects:
+    output: true
+    permalink: /ourwork/:path/
+  aboutus:
+    output: true
+    permalink: /:path/
+  jobs:
+    output: true
+    permalink: /jobs/:path/
+  internships:
+    output: true
+    permalink: /jobs/:path/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "article"
+      class: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "article"
+      class: "project"
+  -
+    scope:
+      path: ""
+      type: "team_and_board"
+    values:
+      layout: "team"
+      class: "team"
+paginate: 10
+paginate_path: /blog/:num/
+sass:
+  style: :nested
+  line_comments: true
+prose:
+  siteurl: "http://mobilab.prefeitura.sp.gov.br"
+  media: "assets"
+  ignore:
+    - /_psd
+    - /_archived
+    - _drafts
+    - /_includes
+    - /_layouts
+    - /_sass
+    - /assets
+    - /js
+    - /css
+    - /wp-content
+    - /_index_pages
+    - /donate
+    - /ourwork
+    - /team
+    - /.gitignore
+    - /.jsbeautifyrc
+    - /CNAME
+    - /_config.yml
+    - /favicon.ico
+    - /feed.xml
+    - /humans.txt
+    - /Makefile
+    - /robots.txt
+    - /tags.jsonp
+    - /blog
+    - /config.ru
+    - /Gemfile
+    - /Gemfile.lock
+    - /vendor
+    - /Procfile
+    - /Rakefile
+  metadata:
+    _posts:
+    _posts/archive:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Título do Post"
+          value: ""
+      - name: "author"
+        field:
+          element: "text"
+          label: "Autor"
+          placeholder: "Coloque seu nome"
+      - name: "image"
+        field:
+          element: "text"
+          label: "Imagem de destaque"
+          value: ""
+          placeholder: "Coloque uma URL"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          options: "http://mobilab.prefeitura.sp.gov.br/tags.jsonp?callback=tags"
+          alterable: true
+      - name: "categories"
+        field:
+          element: "button"
+          label: "Arquivado (permalink existe, mas não é listado no blog)"
+          on: "post"
+          off: "archive"
+    _posts/blog:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Título do Post"
+          value: "Título do Post"
+      - name: "author"
+        field:
+          element: "text"
+          label: "Autor"
+          placeholder: "Coloque seu nome"
+      - name: "excerpt"
+        field:
+          element: "text"
+          label: "Resumo do Post"
+      - name: "image"
+        field:
+          element: "text"
+          label: "Imagem do Post"
+          help: "URL tem que começar com /assets"
+          placeholder: "Coloque uma URL"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          options: "http://mobilab.prefeitura.sp.gov.br/tags.jsonp?callback=tags"
+          alterable: true
+      - name: "categories"
+        field:
+          element: "hidden"
+          value: "blog"
+    _projects:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Título do Projeto"
+          value: "Título do Projeto"
+      - name: "image"
+        field:
+          element: "text"
+          label: "Imagem destacada"
+          help: "URL tem que começar com /assets"
+          value: ""
+          placeholder: "Coloque uma URL"
+      - name: "featured"
+        field:
+          element: "select"
+          label: "Projeto Destacado?"
+          options:
+            - name: "Destaque Grande"
+              value: "large"
+            - name: "Destaque Médio"
+              value: "medium"
+            - name: "Destaque Pequeno"
+              value: "small"
+            - name: "Não"
+              value: ""
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Selecione tag(s) para listar posts de blog relacionados"
+          options: "http://mobilab.prefeitura.sp.gov.br/tags.jsonp?callback=tags"
+          alterable: true
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          placeholder: "/link/to/this/page"
+          value: ""
+    _team_and_board:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Nome"
+          value: "Nome Completo"
+      - name: "role"
+        field:
+          element: "text"
+          label: "Cargo"
+          value: ""
+          placeholder: "Cargo Profissional"
+      - name: "excerpt"
+        field:
+          element: "text"
+          label: "Resumo de duas linhas da biografia"
+          value: ""
+      - name: "email"
+        field:
+          element: "text"
+          label: "Endereço de Email"
+          value: ""
+          placeholder: "Coloque um email"
+      - name: "twitter"
+        field:
+          element: "text"
+          label: "Perfil de Twitter"
+          value: ""
+          placeholder: "Coloque URL"
+      - name: "image"
+        field:
+          element: "text"
+          label: "Imagem de perfil"
+          help: "Comece com /, por exemplo, /assets/my-image.jpg"
+          value: ""
+          placeholder: "Coloque uma URL"
+      - name: "background-image"
+        field:
+          element: "text"
+          label: "Imagem de fundo (mostrada na página de detalhes individuais)"
+          value: ""
+          placeholder: "Coloque uma URL"
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          placeholder: "/link/to/this/page"
+          value: ""
+      - name: "tags"
+        field:
+          element: "select"
+          label: "Time / Board / Advisor"
+          placeholder: "Selecione uma opção"
+          options:
+            - name: "Time"
+              value: "core"
+            - name: "Board"
+              value: "board"
+            - name: "Advisor"
+              value: "advisor"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "team"
+    _jobs:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Cargo"
+          value: "Cargo"
+      - name: "excerpt"
+        field:
+          element: "text"
+          label: "Resumo"
+          help: "Resumo do cargo em duas linhas"
+          value: ""
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "job"
+    _internships:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Cargo"
+          value: "Cargo"
+      - name: "excerpt"
+        field:
+          element: "text"
+          label: "Excerpt"
+          help: "Resumo de duas linhas do estágio"
+          value: ""
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "job"

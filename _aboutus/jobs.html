@@ -1,0 +1,51 @@
+---
+layout: default
+title: "Trabalhe Conosco"
+permalink: /jobs/
+image: /assets/gregor-laptop-guyana.jpg
+featured: medium
+---
+<section class="row grid">
+{% assign jobs_available = false %}
+<div class="columns">
+  <h2>Trabalhe Conosco</h2>
+  <ul class="large-block-grid-2 small-block-grid-1">
+    {% for post in site.jobs %}
+    {% unless post.published == false %}
+    {% assign jobs_available = true %}
+    <li>
+      <h4><b><a href="{{ post.url }}">{{ post.title }}</a></b></h4>
+      <p class="subhead">{{ post.excerpt }}</p>
+      <p><a href="{{ post.url }}">Veja mais sobre esta vaga</a></p>
+    </li>
+    {% endunless %}
+    {% endfor %}
+  </ul>
+  {% unless jobs_available %}
+  <p>Infelizmente não temos vagas disponíveis no momento. :(</p>
+  {% endunless %}
+</div>
+</section>
+
+{% assign internships_available = false %}
+<section class="row grid">
+<div class="columns">
+  <h2>Estágios</h2>
+  <ul class="large-block-grid-2 small-block-grid-1">
+    {% for post in site.internships %}
+    {% unless post.published == false %}
+    {% assign internships_available = true %}
+    <li>
+      <h4><b><a href="{{ post.url }}">{{ post.title }}</a></b></h4>
+      <p class="subhead">{{ post.excerpt }}</p>
+      <p><a href="{{ post.url }}">Veja mais sobre esta vaga</a></p>
+    </li>
+    {% endunless %}
+    {% endfor %}
+  </ul>
+  {% unless internships_available %}
+  <p>Infelizmente não temos vagas de estágio disponíveis no momento. :(</p>
+  <!-- <p>Nós não temos vagas de estágio abertas no momento, infelizmente :(, por favor  We have no open internships available at this time, but if you are interested in hearing about internships when they are available please write to <a href="mailto:jobs@digital-democracy.org">jobs@digital-democracy.org</a> attaching your resumé.</p> -->
+  {% endunless %}
+</div>
+</section>
