@@ -1,33 +1,33 @@
-.logo {
-  line-height: $dd-logo-size - 3px;
-  height: $dd-logo-size - 3px;
-}
-.logo a:before {
-  content: "";
-  background-image: url("/logo mobilab.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: $dd-blue;
-  position: absolute;
-  background-color: #fff;
-  text-indent: 0;
-  top: -15px;
-  left: 15px;
-  font-weight: bold;
-  text-align: center;
-  font-famroundily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  //width: $dd-logo-size+10;
-  //height: $dd-logo-size;
-  width: 228px;
-  height: 100px;
-  border: 4px solid #444;
-  font-size: $dd-logo-size / 2;
-  margin-top: -4px;
-  //padding-top: 12px;
-}
+// .logo {
+//   line-height: $dd-logo-size - 3px;
+//   height: $dd-logo-size - 3px;
+// }
+// .logo a:before {
+//   content: "";
+//   background-image: url("/logo mobilab.svg");
+//   background-size: contain;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   color: $dd-blue;
+//   position: absolute;
+//   background-color: #fff;
+//   text-indent: 0;
+//   top: -15px;
+//   left: 15px;
+//   font-weight: bold;
+//   text-align: center;
+//   font-famroundily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+//   //width: $dd-logo-size+10;
+//   //height: $dd-logo-size;
+//   width: 228px;
+//   height: 100px;
+//   border: 4px solid #444;
+//   font-size: $dd-logo-size / 2;
+//   margin-top: -4px;
+//   //padding-top: 12px;
+// }
 
-.logo a:after {
+//.logo a:after {
   //content: "";
   //position: absolute;
   //width: 35px;
@@ -38,4 +38,30 @@
   //clip: rect(0,17.5px,17.5px,0);
   //@include border-radius(17.5px 0 0);
   //@include rotate(25deg);
+//}
+
+@media #{$medium-up} {
+  #logo-mobilab {
+    margin-top: 95px;
+    margin-bottom: 27px;
+  }
+}
+
+@media #{$small-only} {
+  #logo-mobilab {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+#logo-mobilab {
+  background-size: contain;
+  //max-height: 400px;
+}
+
+#logo-mobilab > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 400px;
 }
