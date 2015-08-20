@@ -73,10 +73,10 @@ $leftbar-width: remCalc(85);
         border: 1px solid grey;
       }
     }
-    & > p:first-of-type {
-      padding-right: 0.5em;
-      font-size: 1.1em;
-    }
+    // & > p:first-of-type {
+    //   padding-right: 0.5em;
+    //   font-size: 1.1em;
+    // }
     > * {
       padding-left: 16px;
       padding-right: 16px;
@@ -128,10 +128,10 @@ $leftbar-width: remCalc(85);
       position: inline;
       margin: 0;
     }
-    & > p:first-of-type {
-      padding-right: 1em;
-      font-size: 1.2em;
-    }
+    // & > p:first-of-type {
+    //   padding-right: 1em;
+    //   font-size: 1.2em;
+    // }
     h1 {
       font-size: emCalc(27);
     }
@@ -233,9 +233,9 @@ $leftbar-width: remCalc(85);
     padding-bottom: map-get($ratios, "ratio24x10");
   }
   .article .content {
-    & > p:first-of-type {
-      font-size: 1.4em;
-    }
+    // & > p:first-of-type {
+    //   font-size: 1.4em;
+    // }
     p, ol, ul {
       font-size: 1.2em;
     }
