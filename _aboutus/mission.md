@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Nossa Missão"
+title: "Quem somos"
 image: /assets/workshop-chiapas-emily.jpg
 featured: large
 ---
