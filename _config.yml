@@ -1,6 +1,6 @@
 name: Mobilab
 description: Laboratório de Mobilidade Urbana da Prefeitura de São Paulo
-url: http://mobilab.prefeitura.sp.gov.br
+url: http://mobilabsp.github.io
 timezone: America/Sao_Paulo
 markdown: redcarpet
 redcarpet:
