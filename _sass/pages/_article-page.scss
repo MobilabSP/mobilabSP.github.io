@@ -63,6 +63,7 @@ $leftbar-width: remCalc(85);
     @include grid-row();
     position: relative;
     padding-top: 1em;
+    margin-bottom: 37px;
     img {
       width: 100%;
     }
