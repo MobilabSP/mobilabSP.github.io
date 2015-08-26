@@ -42,7 +42,7 @@
 
 @media #{$medium-up} {
   #logo-mobilab {
-    margin-top: 95px;
+    padding-top: 95px;
     margin-bottom: 27px;
   }
 }
@@ -56,6 +56,7 @@
 
 #logo-mobilab {
   background-size: contain;
+  background-image: url('/background do header.png');
   //max-height: 400px;
 }
 
