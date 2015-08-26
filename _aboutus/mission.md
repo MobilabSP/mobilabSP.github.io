@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Quem somos"
-image: /assets/workshop-chiapas-emily.jpg
+image: /assets/circuitos e tal.jpg
 featured: large
 ---
 O MobiLab é uma iniciativa da Secretaria Municipal de Transportes (SMT) da Prefeitura Municipal de São Paulo, que busca o desenvolvimento de soluções para a melhoria da gestão do transporte, do trânsito e da mobilidade urbana na cidade, orientado pelas premissas que caracterizam em uma experiência concreta de governo aberto: inovação, transparência e participação da sociedade civil.
