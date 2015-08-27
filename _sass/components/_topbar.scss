@@ -74,7 +74,8 @@ header.site-header {
   position: relative;
   font-size: $rem-base;
   z-index: 999;
-  background-color: $dd-blue;
+  //background-color: $dd-blue;
+  background-color: $topbar-bg-color;
 
   // Menu button
   button {
@@ -197,7 +198,7 @@ body[data-section="/supporters/"] nav ul li > a[href="/aboutus/"] {
     margin-top: $topbar-margin-bottom;
     margin-bottom: $topbar-margin-bottom;
     box-shadow: 62.5em 0 transparentize($dd-blue, 0.1);
-    background-color: transparentize($dd-blue, 0.1);
+    //background-color: transparentize($dd-blue, 0.1);
 
     // Add a full-width colored bar behind the nav
     &:before {
